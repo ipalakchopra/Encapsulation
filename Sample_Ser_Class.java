@@ -7,6 +7,8 @@ public class Sample_Ser_Class implements Serializable{
 
     public int sender_id;
     public int receiver_id;
+
+    public long file_timeout;
     
 }
 
