@@ -17,9 +17,6 @@ public class Sample_Main {
         catch(IOException e){
             e.printStackTrace();
         }
-
-        
-
     }
 
     public static void main(String[] args) {
