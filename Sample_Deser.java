@@ -20,6 +20,9 @@ public class Sample_Deser {
             System.out.println(d1.receiver_id);
             System.out.println(d1.sender_id);
             System.out.println(d1.file_timeout);
+            File f = d1.main_file;
+
+            System.out.println(f.getName());
         }
 
 
