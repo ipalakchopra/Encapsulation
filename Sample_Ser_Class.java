@@ -9,6 +9,6 @@ public class Sample_Ser_Class implements Serializable{
     public int receiver_id;
 
     public long file_timeout;
-    
+    //sample comment
 }
 
