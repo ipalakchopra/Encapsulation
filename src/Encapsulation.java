@@ -9,7 +9,7 @@ public class Encapsulation {
     public static void Write_File(Container c) throws IOException{
         
         try{
-            FileOutputStream file_out = new FileOutputStream("C:\\Users\\ppk\\Documents\\Encapsulation\\encap_file.sec");
+            FileOutputStream file_out = new FileOutputStream("C:\\Users\\ppk\\Documents\\Encapsulation\\encap_file2.sec");
             ObjectOutputStream obj_out = new ObjectOutputStream(file_out);
 
             obj_out.writeObject(c);
@@ -34,12 +34,13 @@ public class Encapsulation {
         
         c.file_extension = file_ext.substring(file_ext.indexOf("."));
         
-        //System.out.println(c.file_extension);
+        System.out.println(c.file_extension);
 
         c.byte_file = Files.readAllBytes(file_path);
-        c.sender_id = 1;
+    
+        c.sender_id = 111111111;
         c.receiver_id = 2;
-
+        //c.method1(111);
         Write_File(c);
     }
 }

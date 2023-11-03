@@ -16,7 +16,7 @@ public class Decapsulation {
             ObjectInputStream obj_in = new ObjectInputStream(file_in);
 
             c_decap =(Container) obj_in.readObject();
-
+            c_decap.method2();
             file_in.close();
             obj_in.close();
         }
