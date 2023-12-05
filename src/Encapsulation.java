@@ -1,15 +1,18 @@
+
 package src;
+import src.Container;
 
 import java.util.*;
 import java.io.*;
 import java.nio.file.*;
+
 
 public class Encapsulation {
 
     public static void Write_File(Container c) throws IOException{
         
         try{
-            FileOutputStream file_out = new FileOutputStream("C:\\Users\\ppk\\Documents\\Encapsulation\\encap_file2.sec");
+            FileOutputStream file_out = new FileOutputStream("E:\\College\\Sem_7\\LY_Project\\Encapsulation\\encap_file2.sec");
             ObjectOutputStream obj_out = new ObjectOutputStream(file_out);
 
             obj_out.writeObject(c);
@@ -28,7 +31,7 @@ public class Encapsulation {
 
         Container c = new Container();
 
-        Path file_path = Paths.get("C:\\Users\\ppk\\Documents\\Encapsulation\\datatype.xlsx");
+        Path file_path = Paths.get("E:\\College\\Sem_7\\LY_Project\\Encapsulation\\datatype.xlsx");
 
         String file_ext = file_path.toString(); 
         
