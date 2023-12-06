@@ -32,6 +32,7 @@ public class Encapsulation {
             file_out.write(c.sender_id);
             file_out.write(c.receiver_id);
             file_out.write(c.file_extension);
+            file_out.write("\n".getBytes());
             file_out.write(c.byte_file);
              
             file_out.close();
@@ -49,12 +50,12 @@ public class Encapsulation {
 
         Container c = new Container();
 
-        Path file_path = Paths.get("E:\\College\\Sem_7\\LY_Project\\Encapsulation\\datatype.xlsx");
+        Path file_path = Paths.get("E:\\College\\Sem_7\\LY_Project\\Encapsulation\\test_pdf.pdf");
 
         String file_ext = file_path.toString(); 
         
-        String s_id = "111111";
-        String r_id = "222222";
+        String s_id = "DL0KG6WZwu";
+        String r_id = "ifkhtCNnIc";
 
         c.file_extension = file_ext.substring(file_ext.indexOf(".")).getBytes();
         
