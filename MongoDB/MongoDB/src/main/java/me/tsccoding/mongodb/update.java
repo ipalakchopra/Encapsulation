@@ -16,7 +16,7 @@ import org.bson.Document;
 import java.util.logging.Level;
 import org.bson.conversions.Bson;
 
-public class login {
+public class update {
     public static void main(String args[]) throws NoSuchAlgorithmException {
 
         String uri = "mongodb+srv://admin:admin@testcluster.yvs3ank.mongodb.net/";
@@ -30,18 +30,18 @@ public class login {
 
         //Login
         Scanner input1 = new Scanner(System.in);
-        System.out.println("Enter Username : ");
+        System.out.println("Enter Current Username : ");
         String username = input1.next();
 
         Document founduser = (Document) collection.find(new Document("username", username)).first();
-
         if(founduser == null)
        {
-            System.out.println("User not found!");
+            System.out.println("User not found");
+            System.exit(0);
        }
 
         Scanner input2 = new Scanner(System.in);
-        System.out.println("Enter Password : ");
+        System.out.println("Enter Current Password : ");
         String password = input2.next();
 
         String stored_salt = find(username);
@@ -57,28 +57,29 @@ public class login {
         System.out.println("Inncorrect password! ");
        }
        else{
-            System.out.println("Login seccess!");
+            System.out.println("Authentication Success!");
+
+            System.out.println("Enter new Username : ");
+            String new_username = input1.next();
+
+           System.out.println("Enter new Password : ");
+           String new_password = input2.next();
+           String hashed_new_password=hashPassword(new_password, stored_salt);
+
+            Bson updatedvalue = new Document("username", new_username);
+            Bson updateoperation = new Document("$set", updatedvalue);
+            collection.updateOne(founduser,updateoperation);
+            Document foundpass1 = (Document) collection.find(new Document("password", hashed_password)).first();
+            Bson updatedvalue1 = new Document("password", hashed_new_password);
+            Bson updateoperation1 = new Document("$set", updatedvalue1);
+            collection.updateOne(foundpass1,updateoperation1);
+            System.out.println("User Updated Successfully!");
+
        }
     }
 
     //_____________________HASHING__________________________
 
-   /* private static boolean validatePassword(String enteredPassword, String storedSalt) {
-     try {
-         // Decode the stored salt from Base64
-         byte[] salt = Base64.getDecoder().decode(storedSalt);
-
-         // Hash the entered password with the retrieved salt
-         String enteredPasswordHash = hashPassword(enteredPassword, salt);
-
-         // Compare the entered password hash with the stored hashed password
-         return enteredPasswordHash.equals(storedHashedPassword);
-     } catch (Exception e) {
-         e.printStackTrace();
-         return false;
-     }
- }
-*/
  // Method to hash the password with the given salt
  private static String hashPassword(String enteredpassword, String storedSalt) {
      try {
