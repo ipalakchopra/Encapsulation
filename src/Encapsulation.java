@@ -58,7 +58,7 @@ public class Encapsulation {
 
         File_AES AESUtil = new File_AES();
 
-        Path file_path = Paths.get("E:\\College\\Sem_7\\LY_Project\\Encapsulation\\test_pdf.pdf");
+        Path file_path = Paths.get("C:\\Users\\ASUS\\Downloads\\image.png");
 
         String file_ext = file_path.toString(); 
         
