@@ -13,9 +13,4 @@ public class Container implements Serializable{
 
     public byte[] secretkey;
     public byte[] iv;
-
-    //public void method1(int id){this.sender_id = id;}
-    /*public void method2(){
-        System.out.println(this.sender_id);
-    }*/
 }

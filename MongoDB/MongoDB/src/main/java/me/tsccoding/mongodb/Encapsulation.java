@@ -275,19 +275,8 @@ public class encapsulation extends javax.swing.JFrame {
     public static void Write_File(Container c) throws IOException{
         
         try{
-            /*FileOutputStream file_out = new FileOutputStream("E:\\College\\Sem_7\\LY_Project\\Encapsulation\\encap_file2.sec");
-            ObjectOutputStream obj_out = new ObjectOutputStream(file_out);
-
-            obj_out.writeObject(c);
-            obj_out.close();
-            file_out.close();*/
 
             RandomAccessFile file_out = new RandomAccessFile("encap_filenew.sec","rw");
-
-            
-            /*file_out.write(c.file_extension, 12, c.file_extension.length);
-
-            file_out.write(c.byte_file, 15, c.byte_file.length);*/
 
             file_out.write(c.sender_id);
             file_out.write(c.receiver_id);

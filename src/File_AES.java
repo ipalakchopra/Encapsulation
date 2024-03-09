@@ -104,13 +104,8 @@ public class File_AES {
         
         try {
             String algorithm = "AES/CBC/PKCS5Padding";
-
-            //String key_String = File_AES.Key_Gen(r_id,s_id);
-
             byte[] decodedKey = Base64.getDecoder().decode(key_String);
             SecretKey key = new SecretKeySpec(decodedKey, 0, decodedKey.length, "AES"); 
-
-            //byte[] iv = File_AES.generateIv();
             IvParameterSpec ivParameterSpec = File_AES.IVGen(iv);
 
             encFile = File_AES.encrypt(algorithm, fileString, key, ivParameterSpec);
@@ -119,7 +114,6 @@ public class File_AES {
             return null;
         }
         return encFile;
-
     }
 
     static String DecDriver(String keyString, String EncFileString, byte[] iv) throws NoSuchPaddingException{
@@ -134,15 +128,12 @@ public class File_AES {
             IvParameterSpec ivParameterSpec = File_AES.IVGen(iv);
             System.out.println("ff");
             decFile = File_AES.decrypt(algorithm, EncFileString, key, ivParameterSpec);
-            //System.out.println(EncFileString);
 
         } catch (Exception e) {
             System.out.println("err");
             return null;
         }
         return decFile;
-
-
     }
     public static void main(String[] args) {
         String s_id = "DL0KG6WZwu";
