@@ -64,21 +64,21 @@ public class Register extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel3.setText("Full Name");
+        jLabel3.setText("Username");
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(102, 102, 102));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setText("Email");
+        jLabel4.setText("Password");
 
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(102, 102, 102));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel5.setText("Password");
+        jLabel5.setText("Re-enter Password");
 
         jPasswordField1.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jPasswordField1.setForeground(new java.awt.Color(102, 102, 102));
@@ -91,7 +91,8 @@ public class Register extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Sign Up");
 
-        jButton2.setForeground(new java.awt.Color(255, 51, 51));
+        jButton2.setBackground(new java.awt.Color(0, 102, 102));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Login");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

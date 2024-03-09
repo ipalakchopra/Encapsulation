@@ -112,7 +112,8 @@ public class Login extends javax.swing.JFrame {
 
         jLabel4.setText("I don't have an account");
 
-        jButton2.setForeground(new java.awt.Color(255, 51, 51));
+        jButton2.setBackground(new java.awt.Color(0, 102, 102));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Sign Up");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
