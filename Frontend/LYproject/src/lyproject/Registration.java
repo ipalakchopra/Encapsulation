@@ -2,10 +2,10 @@
 package lyproject;
 
 
-public class Register extends javax.swing.JFrame {
+public class Registration extends javax.swing.JFrame {
 
    
-    public Register() {
+    public Registration() {
         initComponents();
     }
 
@@ -184,7 +184,7 @@ public class Register extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Login LoginFrame = new Login(); //instance of login frame
+        Log LoginFrame = new Log(); //instance of login frame
         LoginFrame.setVisible(true);
         LoginFrame.pack();//resize to contain all components
         LoginFrame.setLocationRelativeTo(null);// makes it center

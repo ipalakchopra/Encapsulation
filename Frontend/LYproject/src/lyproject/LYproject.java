@@ -24,7 +24,7 @@ public class LYproject {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Login LoginFrame=new Login(); //instance of login frame
+        Log LoginFrame=new Log(); //instance of login frame
         LoginFrame.setVisible(true);
         LoginFrame.pack();//resize to contain all components
         LoginFrame.setLocationRelativeTo(null);// makes it center

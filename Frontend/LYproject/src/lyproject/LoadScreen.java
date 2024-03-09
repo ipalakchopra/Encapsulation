@@ -32,7 +32,7 @@ public class LoadScreen extends javax.swing.JFrame implements Runnable{
             PerCount.setText(i+" %");
             Progress.setValue(i);
         }
-        Completed cm = new Completed();
+        TaskComplete cm = new TaskComplete();
         cm.setVisible(true);
         dispose();
     }

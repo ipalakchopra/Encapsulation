@@ -13,12 +13,12 @@ import javax.swing.ImageIcon;
  *
  * @author arvin
  */
-public class Login extends javax.swing.JFrame {
+public class Log extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
      */
-    public Login() {
+    public Log() {
         initComponents();
         
     }
@@ -212,7 +212,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Register RegisterFrame = new Register(); //instance of login frame
+        Registration RegisterFrame = new Registration(); //instance of login frame
         RegisterFrame.setVisible(true);
         RegisterFrame.pack();//resize to contain all components
         RegisterFrame.setLocationRelativeTo(null);// makes it center

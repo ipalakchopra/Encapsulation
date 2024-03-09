@@ -8,12 +8,12 @@ package lyproject;
  *
  * @author arvin
  */
-public class Selection extends javax.swing.JFrame {
+public class Select extends javax.swing.JFrame {
 
     /**
      * Creates new form Selection
      */
-    public Selection() {
+    public Select() {
         initComponents();
     }
 
@@ -35,7 +35,6 @@ public class Selection extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 500));
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -146,7 +145,7 @@ public class Selection extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        encapsulation EncapsulationFrame = new encapsulation(); //instance of login frame
+        Encap EncapsulationFrame = new Encap(); //instance of login frame
         EncapsulationFrame.setVisible(true);
         EncapsulationFrame.pack();//resize to contain all components
         EncapsulationFrame.setLocationRelativeTo(null);// makes it center
@@ -155,7 +154,7 @@ public class Selection extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Decapsulation DecapsulationFrame = new Decapsulation();
+        Decap DecapsulationFrame = new Decap();
         DecapsulationFrame.setVisible(true);
         DecapsulationFrame.pack();//resize to contain all components
         DecapsulationFrame.setLocationRelativeTo(null);// makes it center
@@ -179,20 +178,21 @@ public class Selection extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Selection.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Select.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Selection.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Select.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Selection.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Select.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Selection.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Select.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Selection().setVisible(true);
+                new Select().setVisible(true);
             }
         });
     }

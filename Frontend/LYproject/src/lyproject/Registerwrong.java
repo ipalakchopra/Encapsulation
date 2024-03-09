@@ -121,7 +121,7 @@ public class Registerwrong extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Register RegisterFrame = new Register(); //instance of login frame
+        Registration RegisterFrame = new Registration(); //instance of login frame
         RegisterFrame.setVisible(true);
         RegisterFrame.pack();//resize to contain all components
         RegisterFrame.setLocationRelativeTo(null);// makes it center
