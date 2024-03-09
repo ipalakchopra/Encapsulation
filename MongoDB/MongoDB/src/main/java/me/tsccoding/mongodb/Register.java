@@ -123,7 +123,6 @@ public class Register {
                     // Convert the byte array to a hexadecimal string
                     hashedPassword = bytesToHex(hashedBytes);
                 } catch (NoSuchAlgorithmException e) {
-                    e.printStackTrace();
                 }
                 return hashedPassword;
             }

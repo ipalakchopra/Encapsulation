@@ -58,13 +58,12 @@ public class Encapsulation {
 
         File_AES AESUtil = new File_AES();
 
-        Path file_path = Paths.get("E:\\College\\Sem_7\\LY_Project\\Encapsulation\\test_pdf.pdf");
+        Path file_path = Paths.get("C:\Users\Zain\Documents\GitHub\Encapsulation\NRI Letter.pdf");
 
         String file_ext = file_path.toString(); 
         
         String s_id = "DL0KG6WZwu";
         String r_id = "ifkhtCNnIc";
-        
         
         c.file_extension = file_ext.substring(file_ext.indexOf(".")).getBytes();
         
