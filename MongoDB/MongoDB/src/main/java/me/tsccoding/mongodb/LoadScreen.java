@@ -32,7 +32,7 @@ public class LoadScreen extends javax.swing.JFrame implements Runnable{
             PerCount.setText(i+" %");
             Progress.setValue(i);
         }
-        Completed cm = new Completed();
+        TaskComplete cm = new TaskComplete();
         cm.setVisible(true);
         dispose();
     }
@@ -54,11 +54,10 @@ public class LoadScreen extends javax.swing.JFrame implements Runnable{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(800, 500));
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 102));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\arvin\\Documents\\NetBeansProjects\\LYproject\\src\\lyproject\\Stealth (1).png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Stealth (1).png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,7 +114,57 @@ public class LoadScreen extends javax.swing.JFrame implements Runnable{
     /**
      * @param args the command line arguments
      */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(LoadScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(LoadScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(LoadScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(LoadScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
+        /* Create and display the form */
+        LoadScreen lc = new LoadScreen();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                lc.setVisible(true);
+            }
+        });
+//        try{
+//            for(int i=0;i<=100;i++){
+//                Thread.sleep(50);
+//                lc.Progress.setValue(i);//progress is variable name of jpro
+//                lc.PerCount.setText(Integer.toString(i)+"%");//percount is variable name of jlable which count percentage
+//                
+//            }
+//        }catch(Exception e){
+//            
+//        }
+//        // completed screen
+//        Completed cm = new Completed();
+//        //close loding before opening completed
+//        lc.setVisible(false);
+//        cm.setVisible(true);//show completed screen
+        
+        
+        //close load screen
+        //lc.dispose();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel PerCount;
@@ -125,5 +174,7 @@ public class LoadScreen extends javax.swing.JFrame implements Runnable{
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
+    
 
+    
 }

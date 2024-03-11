@@ -203,7 +203,7 @@ public class Register2 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Loginframe2 Loginframe2 = new Loginframe2(); //instance of login frame
+        Log Loginframe2 = new Log(); //instance of login frame
         Loginframe2.setVisible(true);
         Loginframe2.pack();//resize to contain all components
         Loginframe2.setLocationRelativeTo(null);// makes it center
@@ -280,7 +280,7 @@ public class Register2 extends javax.swing.JFrame {
         document.append ("uniqueid", randomString);
         collection.insertOne(document);
         System.out.println("User successfully created!");
-        Loginframe2 Loginframe2 = new Loginframe2(); //instance of login frame
+        Log Loginframe2 = new Log(); //instance of login frame
         Loginframe2.setVisible(true);
         Loginframe2.pack();//resize to contain all components
         Loginframe2.setLocationRelativeTo(null);// makes it center
