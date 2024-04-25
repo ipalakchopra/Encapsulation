@@ -58,7 +58,7 @@ public class Encapsulation {
 
         File_AES AESUtil = new File_AES();
 
-        Path file_path = Paths.get("C:\Users\Zain\Documents\GitHub\Encapsulation\NRI Letter.pdf");
+        Path file_path = Paths.get("/home/ubuntu/Encapsulation/src/decap_filenew.png");
 
         String file_ext = file_path.toString(); 
         
